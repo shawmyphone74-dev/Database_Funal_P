@@ -29,7 +29,7 @@ namespace Database_Funal_P
 
             int courseId;
             int creditHours;
-
+            
             if (!int.TryParse(course_id.Text, out courseId))
             {
                 MessageBox.Show("Course ID must be a number");
@@ -64,7 +64,7 @@ namespace Database_Funal_P
                     {creditHours}
                 )";
 
-                DatabaseHelper.ExecuteQuery(query);
+                DatabaseHelper.Execute(query);
 
                 MessageBox.Show("Course Added Successfully  ");
 

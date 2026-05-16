@@ -40,11 +40,13 @@
             specializiation = new TextBox();
             label5 = new Label();
             label6 = new Label();
-            ManagerId = new TextBox();
             label7 = new Label();
             salary = new TextBox();
             label8 = new Label();
             hiredate = new DateTimePicker();
+            Type = new ComboBox();
+            ManageridText = new TextBox();
+            label9 = new Label();
             SuspendLayout();
             // 
             // AddButton
@@ -151,22 +153,16 @@
             label6.TabIndex = 12;
             label6.Text = "Hire Date";
             // 
-            // ManagerId
-            // 
-            ManagerId.Location = new Point(351, 348);
-            ManagerId.Name = "ManagerId";
-            ManagerId.Size = new Size(100, 23);
-            ManagerId.TabIndex = 17;
-            // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F);
-            label7.Location = new Point(235, 350);
+            label7.Location = new Point(545, 33);
             label7.Name = "label7";
-            label7.Size = new Size(92, 21);
+            label7.Size = new Size(42, 21);
             label7.TabIndex = 16;
-            label7.Text = "Manager_Id";
+            label7.Text = "Type";
+            label7.Click += label7_Click;
             // 
             // salary
             // 
@@ -193,13 +189,42 @@
             hiredate.Size = new Size(200, 23);
             hiredate.TabIndex = 18;
             // 
+            // Type
+            // 
+            Type.DropDownStyle = ComboBoxStyle.DropDownList;
+            Type.FormattingEnabled = true;
+            Type.Items.AddRange(new object[] { "Teacher", "Manager" });
+            Type.Location = new Point(614, 35);
+            Type.Name = "Type";
+            Type.Size = new Size(121, 23);
+            Type.TabIndex = 19;
+            // 
+            // ManageridText
+            // 
+            ManageridText.Location = new Point(614, 108);
+            ManageridText.Name = "ManageridText";
+            ManageridText.Size = new Size(100, 23);
+            ManageridText.TabIndex = 21;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F);
+            label9.Location = new Point(495, 106);
+            label9.Name = "label9";
+            label9.Size = new Size(92, 21);
+            label9.TabIndex = 20;
+            label9.Text = "Manager_Id";
+            // 
             // AddTeacher
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(ManageridText);
+            Controls.Add(label9);
+            Controls.Add(Type);
             Controls.Add(hiredate);
-            Controls.Add(ManagerId);
             Controls.Add(label7);
             Controls.Add(salary);
             Controls.Add(label8);
@@ -217,6 +242,28 @@
             Controls.Add(AddButton);
             Name = "AddTeacher";
             Text = "AddTeacher";
+            Controls.SetChildIndex(AddButton, 0);
+            Controls.SetChildIndex(label1, 0);
+            Controls.SetChildIndex(teacher_id, 0);
+            Controls.SetChildIndex(label2, 0);
+            Controls.SetChildIndex(fristname, 0);
+            Controls.SetChildIndex(label3, 0);
+            Controls.SetChildIndex(lastname, 0);
+            Controls.SetChildIndex(label4, 0);
+            Controls.SetChildIndex(email, 0);
+            Controls.SetChildIndex(label5, 0);
+            Controls.SetChildIndex(specializiation, 0);
+            Controls.SetChildIndex(label6, 0);
+            Controls.SetChildIndex(label8, 0);
+            Controls.SetChildIndex(salary, 0);
+            Controls.SetChildIndex(label7, 0);
+            Controls.SetChildIndex(hiredate, 0);
+            Controls.SetChildIndex(LogoutButton, 0);
+            Controls.SetChildIndex(HomeButton, 0);
+            Controls.SetChildIndex(BackButton, 0);
+            Controls.SetChildIndex(Type, 0);
+            Controls.SetChildIndex(label9, 0);
+            Controls.SetChildIndex(ManageridText, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -235,10 +282,12 @@
         private TextBox specializiation;
         private Label label5;
         private Label label6;
-        private TextBox ManagerId;
         private Label label7;
         private TextBox salary;
         private Label label8;
         private DateTimePicker hiredate;
+        private ComboBox Type;
+        private TextBox ManageridText;
+        private Label label9;
     }
 }

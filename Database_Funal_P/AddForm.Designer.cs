@@ -40,7 +40,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13F);
-            label1.Location = new Point(344, 77);
+            label1.Location = new Point(332, 60);
             label1.Name = "label1";
             label1.Size = new Size(106, 25);
             label1.TabIndex = 0;
@@ -105,6 +105,15 @@
             Name = "AddForm";
             Text = "AddForm";
             Load += AddForm_Load;
+            Controls.SetChildIndex(label1, 0);
+            Controls.SetChildIndex(StudentButton, 0);
+            Controls.SetChildIndex(ParentButton, 0);
+            Controls.SetChildIndex(TeacherButton, 0);
+            Controls.SetChildIndex(CourseButton, 0);
+            Controls.SetChildIndex(AttendanceButton, 0);
+            Controls.SetChildIndex(LogoutButton, 0);
+            Controls.SetChildIndex(HomeButton, 0);
+            Controls.SetChildIndex(BackButton, 0);
             ResumeLayout(false);
             PerformLayout();
         }

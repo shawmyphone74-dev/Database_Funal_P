@@ -19,78 +19,99 @@ namespace Database_Funal_P
             {
                 string query = "";
 
-                
+
                 if (QueryType.Text == "Students With Parents")
                 {
                     query =
                     @"SELECT
-                        Student.Student_ID,
-                        Student.First_Name,
-                        Parent.First_Name AS Parent_Name
-                    FROM Student
-                    INNER JOIN Parent
-                    ON Student.Parent_ID = Parent.Parent_ID";
-                }
+        Student.Student_ID,
 
-               
+        Student.First_Name + ' ' +
+        Student.Last_Name
+        AS [Student Name],
+
+        Parent.First_Name + ' ' +
+        Parent.Last_Name
+        AS [Parent Name]
+
+    FROM Student
+
+    INNER JOIN Parent
+    ON Student.Parent_ID = Parent.Parent_ID";
+                }
 
                 else if (QueryType.Text == "Students With Classes")
                 {
                     query =
                     @"SELECT
-                        Student.Student_ID,
-                        Student.First_Name,
-                        Class.Class_ID,
-                        Class.Level
-                    FROM Student
-                    INNER JOIN Class
-                    ON Student.Class_ID = Class.Class_ID";
-                }
+        Student.Student_ID,
 
-               
+        Student.First_Name + ' ' +
+        Student.Last_Name
+        AS [Student Name],
+
+        Class.Class_ID,
+        Class.Class_Name AS [Class Name]
+
+    FROM Student
+
+    INNER JOIN Class
+    ON Student.Class_ID = Class.Class_ID";
+                }
 
                 else if (QueryType.Text == "Teachers With Managers")
                 {
                     query =
                     @"SELECT
-                        T1.Teacher_ID,
-                        T1.First_Name,
-                        T2.First_Name AS Manager_Name
-                    FROM Teacher T1
-                    LEFT JOIN Teacher T2
-                    ON T1.Manager_ID = T2.Teacher_ID";
+        T1.Teacher_ID,
+
+        T1.First_Name + ' ' +
+        T1.Last_Name
+        AS [Teacher Name],
+
+        T2.First_Name + ' ' +
+        T2.Last_Name
+        AS [Manager Name]
+
+    FROM Teacher T1
+
+    LEFT JOIN Teacher T2
+    ON T1.Manager_ID = T2.Teacher_ID";
                 }
-
-                
-
 
                 else if (QueryType.Text ==
                          "Left Join Students And Attendance")
                 {
                     query =
                     @"SELECT
-                        Student.Student_ID,
-                        Student.First_Name,
-                        Attendance.Status
-                    FROM Student
-                    LEFT JOIN Attendance
-                    ON Student.Student_ID = Attendance.Student_ID";
-                }
+        Student.Student_ID,
 
-               
+        Student.First_Name + ' ' +
+        Student.Last_Name
+        AS [Student Name],
+
+        Attendance.Status
+
+    FROM Student
+
+    LEFT JOIN Attendance
+    ON Student.Student_ID = Attendance.Student_ID";
+                }
 
                 else if (QueryType.Text ==
                          "Students With Phones")
                 {
                     query =
                     @"SELECT
-                        Student.Student_ID,
-                        Student.First_Name,
-                        Student_Phone.Phone
+                    Student.Student_ID,
+                    Student.First_Name + ' ' +
+                    Student.Last_Name
+                    AS [Student Name],
+                    Student_Phone.Phone
                     FROM Student
-                    INNER JOIN Student_Phone
-                    ON Student.Student_ID =
-                    Student_Phone.Student_ID";
+                     INNER JOIN Student_Phone
+                     ON Student.Student_ID =
+                     Student_Phone.Student_ID";
                 }
 
                 else if (QueryType.Text ==
@@ -98,57 +119,63 @@ namespace Database_Funal_P
                 {
                     query =
                     @"SELECT
-                        Teacher.Teacher_ID,
-                        Teacher.First_Name,
-                        Course.Course_Name
+                    Teacher.Teacher_ID,
+
+                      Teacher.First_Name + ' ' +
+                     Teacher.Last_Name
+                  AS [Teacher Name],
+
+                    Course.Course_Name
+
                     FROM Teacher
-                    INNER JOIN Teaches
-                    ON Teacher.Teacher_ID =
-                    Teaches.Teacher_ID
 
-                    INNER JOIN Course
-                    ON Teaches.Course_ID =
-                    Course.Course_ID";
+               INNER JOIN Teaches
+                  ON Teacher.Teacher_ID =
+                  Teaches.Teacher_ID
+
+                 INNER JOIN Course
+                   ON Teaches.Course_ID =
+                   Course.Course_ID";
                 }
-
-                
 
                 else if (QueryType.Text ==
                          "Courses With Classes")
                 {
                     query =
-                    @"SELECT
-                        Course.Course_Name,
-                        Class.Class_ID
-                        
-                    FROM Course
+                                 @"SELECT
+                     Course.Course_Name,
+                    Class.Class_ID
 
-                    INNER JOIN Contain
-                    ON Course.Course_ID =
-                    Contain.Course_ID
+               FROM Course
 
-                    INNER JOIN Class
-                    ON Contain.Class_ID =
-                    Class.Class_ID";
+                INNER JOIN Contain
+                  ON Course.Course_ID =
+                     Contain.Course_ID
+  
+                 INNER JOIN Class
+                 ON Contain.Class_ID =
+                  Class.Class_ID";
                 }
-
-
-
 
                 else if (QueryType.Text ==
                          "Attendance With Student Names")
                 {
                     query =
                     @"SELECT
-                        Attendance.Student_ID,
-                        Student.First_Name,
-                        Attendance.Attendance_Date,
-                        Attendance.Status
-                    FROM Attendance
+        Attendance.Student_ID,
 
-                    INNER JOIN Student
-                    ON Attendance.Student_ID =
-                    Student.Student_ID";
+        Student.First_Name + ' ' +
+        Student.Last_Name
+        AS [Student Name],
+
+        Attendance.Attendance_Date,
+        Attendance.Status
+
+    FROM Attendance
+
+    INNER JOIN Student
+    ON Attendance.Student_ID =
+    Student.Student_ID";
                 }
 
                 else

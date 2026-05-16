@@ -44,7 +44,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(253, 76);
+            label2.Location = new Point(256, 76);
             label2.Name = "label2";
             label2.Size = new Size(74, 21);
             label2.TabIndex = 27;
@@ -70,6 +70,12 @@
             Name = "DeleteParent";
             Text = "DeleteParent";
             Load += DeleteParent_Load;
+            Controls.SetChildIndex(deleteButton, 0);
+            Controls.SetChildIndex(label2, 0);
+            Controls.SetChildIndex(parent_Id, 0);
+            Controls.SetChildIndex(LogoutButton, 0);
+            Controls.SetChildIndex(HomeButton, 0);
+            Controls.SetChildIndex(BackButton, 0);
             ResumeLayout(false);
             PerformLayout();
         }

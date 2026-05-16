@@ -34,7 +34,7 @@ namespace Database_Funal_P
                     '{email.Text}'
                 )";
 
-                DatabaseHelper.ExecuteQuery(parentQuery);
+                DatabaseHelper.Execute(parentQuery);
 
                 string phoneQuery = $@"
                 INSERT INTO Parent_Phone
@@ -48,7 +48,7 @@ namespace Database_Funal_P
                     '{phone.Text}'
                 )";
 
-                DatabaseHelper.ExecuteQuery(phoneQuery);
+                DatabaseHelper.Execute(phoneQuery);
 
                 MessageBox.Show("Parent Added Successfully");
 

@@ -85,7 +85,7 @@ namespace Database_Funal_P
                     DatabaseHelper.Execute(query);
                 }
 
-                MessageBox.Show("Parent Updated Successfully ✔");
+                MessageBox.Show("Parent Updated Successfully  ");
             }
             catch (Exception ex)
             {

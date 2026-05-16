@@ -28,13 +28,13 @@ namespace Database_Funal_P
                 AND Attendance_Date = 
                 '{dateTimePicker1.Value:yyyy-MM-dd}'";
 
-                DatabaseHelper.ExecuteQuery(query);
+                DatabaseHelper.Execute(query);
 
-                MessageBox.Show("Attendance Deleted Successfully ✔");
+                MessageBox.Show("Attendance Deleted Successfully  ");
 
                 Student_ID.Clear();
 
-                dateTimePicker1.Value = DateTime.Now;
+           
             }
             catch (Exception ex)
             {

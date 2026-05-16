@@ -7,13 +7,11 @@ namespace Database_Funal_P
     {
         static string connectionString =
         @"Server=ABDELMGEED\SQLEXPRESS;
-        Database=School_System;
+        Database=Messi2009;
         Trusted_Connection=True;
         TrustServerCertificate=True;";
 
-        // =====================================
-        // INSERT UPDATE DELETE
-        // =====================================
+        
 
         public static void Execute(string query)
         {
@@ -29,43 +27,11 @@ namespace Database_Funal_P
             }
         }
 
-        // =====================================
-        // ExecuteQuery(query)
-        // =====================================
-
-        public static void ExecuteQuery(string query)
-        {
-            Execute(query);
-        }
-
-        // =====================================
-        // ExecuteQuery(query, parameters)
-        // =====================================
-
-        public static void ExecuteQuery(
-            string query,
-            SqlParameter[] parameters)
-        {
-            using (SqlConnection con =
-                new SqlConnection(connectionString))
-            {
-                con.Open();
-
-                SqlCommand cmd =
-                    new SqlCommand(query, con);
-
-                if (parameters != null)
-                {
-                    cmd.Parameters.AddRange(parameters);
-                }
-
-                cmd.ExecuteNonQuery();
-            }
-        }
-
-        // =====================================
-        // SELECT
-        // =====================================
+        
+        
+        
+        
+        
 
         public static DataTable GetData(string query)
         {
@@ -84,35 +50,9 @@ namespace Database_Funal_P
             }
         }
 
-        // =====================================
-        // SELECT WITH PARAMETERS
-        // =====================================
+        
+       
 
-        public static DataTable GetData(
-            string query,
-            SqlParameter[] parameters)
-        {
-            using (SqlConnection con =
-                new SqlConnection(connectionString))
-            {
-                SqlCommand cmd =
-                    new SqlCommand(query, con);
-
-                if (parameters != null)
-                {
-                    cmd.Parameters.AddRange(parameters);
-                }
-
-                SqlDataAdapter da =
-                    new SqlDataAdapter(cmd);
-
-                DataTable dt =
-                    new DataTable();
-
-                da.Fill(dt);
-
-                return dt;
-            }
-        }
+       
     }
 }

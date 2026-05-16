@@ -32,7 +32,7 @@ namespace Database_Funal_P
                 WHERE Parent_ID =
                 {int.Parse(parent_Id.Text)}";
 
-                DatabaseHelper.ExecuteQuery(query);
+                DatabaseHelper.Execute(query);
 
                 MessageBox.Show("Deleted Successfully ");
 

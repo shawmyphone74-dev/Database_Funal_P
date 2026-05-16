@@ -13,6 +13,7 @@ namespace Database_Funal_P
             BackButton.Click += BackButton_Click;
             HomeButton.Click += HomeButton_Click;
             LogoutButton.Click += LogoutButton_Click;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -56,8 +57,8 @@ namespace Database_Funal_P
                 h.Show();
                 this.Close();
             }
+            
 
-           
             else if (this is DisplayStudent ||
                      this is DisplayParent ||
                      this is DisplayCourse ||
@@ -99,5 +100,7 @@ namespace Database_Funal_P
 
             this.Close();
         }
+       
     }
+
 }

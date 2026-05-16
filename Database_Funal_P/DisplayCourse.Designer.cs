@@ -30,7 +30,7 @@ namespace Database_Funal_P
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(12, 410);
+            BackButton.Location = new Point(8, 410);
             // 
             // SearchType
             // 
@@ -62,7 +62,7 @@ namespace Database_Funal_P
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(40, 150);
+            dataGridView1.Location = new Point(42, 143);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(720, 250);
             dataGridView1.TabIndex = 3;

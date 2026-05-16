@@ -39,7 +39,7 @@ namespace Database_Funal_P
                 DELETE FROM Teacher
                 WHERE Teacher_ID = {teacherId}";
 
-                DatabaseHelper.ExecuteQuery(query);
+                DatabaseHelper.Execute(query);
 
                 MessageBox.Show("Teacher Deleted Successfully ");
 

@@ -24,7 +24,7 @@ namespace Database_Funal_P
 
                 DatabaseHelper.Execute(query);
 
-                MessageBox.Show("Attendance Updated Successfully ✔");
+                MessageBox.Show("Attendance Updated Successfully  ");
             }
             catch (Exception ex)
             {

@@ -26,7 +26,7 @@ namespace Database_Funal_P
                        
                     FROM Teacher ";
 
-                   
+
                 }
 
                 else if (SearchType.Text == "Teacher ID")
@@ -50,7 +50,7 @@ namespace Database_Funal_P
                     
 
                     WHERE Teacher.First_Name = '{SearchText.Text}'";
-                    
+
                 }
                 else if (SearchType.Text == "Last Name")
                 {
@@ -90,7 +90,7 @@ namespace Database_Funal_P
 
                 else if (SearchType.Text == "Manager")
                 {
-                   
+
                     if (SearchText.Text == "")
                     {
                         query =
@@ -101,10 +101,10 @@ namespace Database_Funal_P
 
                           
 
-                          WHERE Teacher.Manager_ID IS NULL";
+                          WHERE Type='Manager'";
                     }
 
-                    
+
                     else
                     {
                         query =
@@ -132,5 +132,7 @@ namespace Database_Funal_P
         {
 
         }
+
+        
     }
 }

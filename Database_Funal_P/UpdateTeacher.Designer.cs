@@ -46,8 +46,10 @@
             UpdateparentButton = new Button();
             Salary = new TextBox();
             label6 = new Label();
-            Manager_Id = new TextBox();
-            label7 = new Label();
+            ManageridText = new TextBox();
+            label9 = new Label();
+            Type = new ComboBox();
+            label10 = new Label();
             SuspendLayout();
             // 
             // BackButton
@@ -56,7 +58,7 @@
             // 
             // Delete
             // 
-            Delete.Location = new Point(542, 271);
+            Delete.Location = new Point(578, 261);
             Delete.Name = "Delete";
             Delete.Size = new Size(75, 23);
             Delete.TabIndex = 90;
@@ -67,7 +69,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(452, 328);
+            label5.Location = new Point(488, 318);
             label5.Name = "label5";
             label5.Size = new Size(54, 21);
             label5.TabIndex = 89;
@@ -75,7 +77,7 @@
             // 
             // PhoneTextb
             // 
-            PhoneTextb.Location = new Point(537, 326);
+            PhoneTextb.Location = new Point(573, 316);
             PhoneTextb.Name = "PhoneTextb";
             PhoneTextb.Size = new Size(100, 23);
             PhoneTextb.TabIndex = 88;
@@ -84,7 +86,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(406, 178);
+            label4.Location = new Point(442, 168);
             label4.Name = "label4";
             label4.Size = new Size(111, 21);
             label4.TabIndex = 87;
@@ -92,7 +94,7 @@
             // 
             // CurrentPhone
             // 
-            CurrentPhone.Location = new Point(537, 178);
+            CurrentPhone.Location = new Point(573, 168);
             CurrentPhone.Name = "CurrentPhone";
             CurrentPhone.Size = new Size(100, 23);
             CurrentPhone.TabIndex = 86;
@@ -101,7 +103,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(416, 221);
+            label3.Location = new Point(452, 211);
             label3.Name = "label3";
             label3.Size = new Size(90, 21);
             label3.TabIndex = 85;
@@ -109,14 +111,14 @@
             // 
             // NewPhone
             // 
-            NewPhone.Location = new Point(537, 223);
+            NewPhone.Location = new Point(573, 213);
             NewPhone.Name = "NewPhone";
             NewPhone.Size = new Size(100, 23);
             NewPhone.TabIndex = 84;
             // 
             // Replace
             // 
-            Replace.Location = new Point(542, 139);
+            Replace.Location = new Point(578, 129);
             Replace.Name = "Replace";
             Replace.Size = new Size(75, 23);
             Replace.TabIndex = 83;
@@ -125,7 +127,7 @@
             // 
             // Add
             // 
-            Add.Location = new Point(542, 19);
+            Add.Location = new Point(578, 9);
             Add.Name = "Add";
             Add.Size = new Size(75, 23);
             Add.TabIndex = 82;
@@ -136,7 +138,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(452, 76);
+            label2.Location = new Point(488, 66);
             label2.Name = "label2";
             label2.Size = new Size(54, 21);
             label2.TabIndex = 81;
@@ -144,7 +146,7 @@
             // 
             // Phone
             // 
-            Phone.Location = new Point(537, 74);
+            Phone.Location = new Point(573, 64);
             Phone.Name = "Phone";
             Phone.Size = new Size(100, 23);
             Phone.TabIndex = 80;
@@ -177,7 +179,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(126, 24);
+            label1.Location = new Point(128, 26);
             label1.Name = "label1";
             label1.Size = new Size(81, 21);
             label1.TabIndex = 76;
@@ -209,30 +211,52 @@
             label6.TabIndex = 91;
             label6.Text = "Salary";
             // 
-            // Manager_Id
+            // ManageridText
             // 
-            Manager_Id.Location = new Point(224, 250);
-            Manager_Id.Name = "Manager_Id";
-            Manager_Id.Size = new Size(100, 23);
-            Manager_Id.TabIndex = 94;
+            ManageridText.Location = new Point(224, 297);
+            ManageridText.Name = "ManageridText";
+            ManageridText.Size = new Size(100, 23);
+            ManageridText.TabIndex = 98;
             // 
-            // label7
+            // label9
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F);
-            label7.Location = new Point(115, 248);
-            label7.Name = "label7";
-            label7.Size = new Size(92, 21);
-            label7.TabIndex = 93;
-            label7.Text = "Manager_Id";
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F);
+            label9.Location = new Point(99, 299);
+            label9.Name = "label9";
+            label9.Size = new Size(92, 21);
+            label9.TabIndex = 97;
+            label9.Text = "Manager_Id";
+            // 
+            // Type
+            // 
+            Type.DropDownStyle = ComboBoxStyle.DropDownList;
+            Type.FormattingEnabled = true;
+            Type.Items.AddRange(new object[] { "Teacher", "Manager" });
+            Type.Location = new Point(224, 235);
+            Type.Name = "Type";
+            Type.Size = new Size(121, 23);
+            Type.TabIndex = 96;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F);
+            label10.Location = new Point(143, 233);
+            label10.Name = "label10";
+            label10.Size = new Size(42, 21);
+            label10.TabIndex = 95;
+            label10.Text = "Type";
             // 
             // UpdateTeacher
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(Manager_Id);
-            Controls.Add(label7);
+            Controls.Add(ManageridText);
+            Controls.Add(label9);
+            Controls.Add(Type);
+            Controls.Add(label10);
             Controls.Add(Salary);
             Controls.Add(label6);
             Controls.Add(Delete);
@@ -271,11 +295,13 @@
             Controls.SetChildIndex(Delete, 0);
             Controls.SetChildIndex(label6, 0);
             Controls.SetChildIndex(Salary, 0);
-            Controls.SetChildIndex(label7, 0);
-            Controls.SetChildIndex(Manager_Id, 0);
             Controls.SetChildIndex(LogoutButton, 0);
             Controls.SetChildIndex(HomeButton, 0);
             Controls.SetChildIndex(BackButton, 0);
+            Controls.SetChildIndex(label10, 0);
+            Controls.SetChildIndex(Type, 0);
+            Controls.SetChildIndex(label9, 0);
+            Controls.SetChildIndex(ManageridText, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -300,7 +326,9 @@
         private Button UpdateparentButton;
         private TextBox Salary;
         private Label label6;
-        private TextBox Manager_Id;
-        private Label label7;
+        private TextBox ManageridText;
+        private Label label9;
+        private ComboBox Type;
+        private Label label10;
     }
 }

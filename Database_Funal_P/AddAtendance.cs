@@ -29,7 +29,7 @@ namespace Database_Funal_P
                 MessageBox.Show("Student ID must be a number");
                 return;
             }
-
+            
             string status = comboBox1.SelectedItem.ToString();
 
             DateTime attendanceDate =
@@ -51,7 +51,7 @@ namespace Database_Funal_P
                     '{status}'
                 )";
 
-                DatabaseHelper.ExecuteQuery(query);
+                DatabaseHelper.Execute(query);
 
                 MessageBox.Show("Attendance Added Successfully  ");
 
@@ -59,18 +59,15 @@ namespace Database_Funal_P
 
                 comboBox1.SelectedIndex = -1;
 
-                dateTimePicker1.Value = DateTime.Now;
+                
             }
             catch (SqlException ex)
             {
-                if (ex.Number == 2627)
-                {
-                    MessageBox.Show("Attendance already exists  ");
-                }
-                else
-                {
+                
+                
+                
                     MessageBox.Show(ex.Message);
-                }
+                
             }
             catch (Exception ex)
             {

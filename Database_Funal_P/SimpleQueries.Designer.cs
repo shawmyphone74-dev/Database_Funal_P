@@ -22,6 +22,7 @@ namespace Database_Funal_P
             ExecuteButton = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
+            SQBox = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -33,15 +34,15 @@ namespace Database_Funal_P
             // 
             QueryType.DropDownStyle = ComboBoxStyle.DropDownList;
             QueryType.FormattingEnabled = true;
-            QueryType.Items.AddRange(new object[] { "High Level Students", "Teachers Ordered By Salary", "Courses Ordered By Credit Hours", "Students Ordered By Name", "Teachers Salary Greater Than 5000", "Courses Credit Hours Greater Than 2" });
-            QueryType.Location = new Point(120, 70);
+            QueryType.Items.AddRange(new object[] { "High Level Students", "Primary Level Students", "Middle Level Students", "Teachers Ordered By Salary Ascending", "Teachers Ordered By Salary Descending", "Courses Ordered By Credit Hours Ascending", "Courses Ordered By Credit Hours Descending", "Students Ordered By Name Ascending", "Students Ordered By Name Descending", "Courses Credit Hours Greater Than", "Courses Credit Hours Less Than", "Teachers Take Salary Greater Than", "Teachers Take Salary Less Than" });
+            QueryType.Location = new Point(107, 70);
             QueryType.Name = "QueryType";
             QueryType.Size = new Size(280, 23);
             QueryType.TabIndex = 3;
             // 
             // ExecuteButton
             // 
-            ExecuteButton.Location = new Point(470, 60);
+            ExecuteButton.Location = new Point(595, 60);
             ExecuteButton.Name = "ExecuteButton";
             ExecuteButton.Size = new Size(120, 40);
             ExecuteButton.TabIndex = 4;
@@ -50,6 +51,7 @@ namespace Database_Funal_P
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(40, 150);
             dataGridView1.Name = "dataGridView1";
@@ -66,10 +68,18 @@ namespace Database_Funal_P
             label1.TabIndex = 6;
             label1.Text = "Simple Queries";
             // 
+            // SQBox
+            // 
+            SQBox.Location = new Point(436, 70);
+            SQBox.Name = "SQBox";
+            SQBox.Size = new Size(115, 23);
+            SQBox.TabIndex = 7;
+            // 
             // SimpleQueries
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             ClientSize = new Size(800, 450);
+            Controls.Add(SQBox);
             Controls.Add(QueryType);
             Controls.Add(ExecuteButton);
             Controls.Add(dataGridView1);
@@ -83,6 +93,7 @@ namespace Database_Funal_P
             Controls.SetChildIndex(LogoutButton, 0);
             Controls.SetChildIndex(HomeButton, 0);
             Controls.SetChildIndex(BackButton, 0);
+            Controls.SetChildIndex(SQBox, 0);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -92,5 +103,6 @@ namespace Database_Funal_P
         private Button ExecuteButton;
         private DataGridView dataGridView1;
         private Label label1;
+        private TextBox SQBox;
     }
 }

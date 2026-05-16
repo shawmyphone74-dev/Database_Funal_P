@@ -38,9 +38,9 @@
             // LogIn_Button
             // 
             LogIn_Button.ForeColor = SystemColors.ActiveCaptionText;
-            LogIn_Button.Location = new Point(355, 294);
+            LogIn_Button.Location = new Point(383, 282);
             LogIn_Button.Name = "LogIn_Button";
-            LogIn_Button.Size = new Size(75, 35);
+            LogIn_Button.Size = new Size(75, 44);
             LogIn_Button.TabIndex = 0;
             LogIn_Button.Text = "LogIn";
             LogIn_Button.UseVisualStyleBackColor = true;
@@ -48,18 +48,21 @@
             // UserName_label
             // 
             UserName_label.AutoSize = true;
-            UserName_label.Location = new Point(246, 40);
+            UserName_label.Font = new Font("Segoe UI", 14F);
+            UserName_label.Location = new Point(223, 37);
             UserName_label.Name = "UserName_label";
-            UserName_label.Size = new Size(65, 15);
+            UserName_label.Size = new Size(105, 25);
             UserName_label.TabIndex = 1;
             UserName_label.Text = "User Name";
             // 
             // Password_Label
             // 
             Password_Label.AutoSize = true;
-            Password_Label.Location = new Point(246, 129);
+            Password_Label.BackColor = SystemColors.Control;
+            Password_Label.Font = new Font("Segoe UI", 14F);
+            Password_Label.Location = new Point(223, 126);
             Password_Label.Name = "Password_Label";
-            Password_Label.Size = new Size(57, 15);
+            Password_Label.Size = new Size(91, 25);
             Password_Label.TabIndex = 2;
             Password_Label.Text = "Password";
             // 
@@ -67,14 +70,14 @@
             // 
             User_TextBox.Location = new Point(355, 37);
             User_TextBox.Name = "User_TextBox";
-            User_TextBox.Size = new Size(100, 23);
+            User_TextBox.Size = new Size(125, 23);
             User_TextBox.TabIndex = 3;
             // 
             // Password_TextBox
             // 
-            Password_TextBox.Location = new Point(355, 126);
+            Password_TextBox.Location = new Point(355, 131);
             Password_TextBox.Name = "Password_TextBox";
-            Password_TextBox.Size = new Size(100, 23);
+            Password_TextBox.Size = new Size(125, 23);
             Password_TextBox.TabIndex = 4;
             // 
             // LoginForm

@@ -60,11 +60,11 @@ namespace Database_Funal_P
                     DatabaseHelper.Execute(query);
                 }
 
-                if (Manager_Id.Text != "")
+                if (ManageridText.Text != "")
                 {
                     string query =
                     $@"UPDATE Teacher
-                    SET Manager_ID = {Manager_Id.Text}
+                    SET Manager_ID = {ManageridText.Text}
                     WHERE Teacher_ID = {Teacher_id.Text}";
 
                     DatabaseHelper.Execute(query);
@@ -94,6 +94,17 @@ namespace Database_Funal_P
                     DatabaseHelper.Execute(query);
                 }
 
+                if (Type.Text!="")
+                {
+                    string query =
+                    $@"UPDATE Teacher
+                    SET Teacher.Type = '{Type.Text}'
+                    WHERE Teacher_ID = {Teacher_id.Text}";
+                    
+
+                    DatabaseHelper.Execute(query);
+                }
+
                 if (PhoneTextb.Enabled &&
                     PhoneTextb.Text != "")
                 {
@@ -105,7 +116,7 @@ namespace Database_Funal_P
                     DatabaseHelper.Execute(query);
                 }
 
-                MessageBox.Show("Teacher Updated Successfully ✔");
+                MessageBox.Show("Teacher Updated Successfully  ");
             }
             catch (Exception ex)
             {

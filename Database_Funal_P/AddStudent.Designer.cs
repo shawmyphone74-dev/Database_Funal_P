@@ -47,10 +47,10 @@
             address = new TextBox();
             email = new TextBox();
             label9 = new Label();
-            classid = new TextBox();
             label10 = new Label();
             label11 = new Label();
             phone = new TextBox();
+            Class_Id = new ComboBox();
             SuspendLayout();
             // 
             // AddStudentButton
@@ -222,13 +222,6 @@
             label9.TabIndex = 17;
             label9.Text = "Address";
             // 
-            // classid
-            // 
-            classid.Location = new Point(377, 339);
-            classid.Name = "classid";
-            classid.Size = new Size(100, 23);
-            classid.TabIndex = 20;
-            // 
             // label10
             // 
             label10.AutoSize = true;
@@ -256,14 +249,24 @@
             phone.Size = new Size(100, 23);
             phone.TabIndex = 21;
             // 
+            // Class_Id
+            // 
+            Class_Id.DropDownStyle = ComboBoxStyle.DropDownList;
+            Class_Id.FormattingEnabled = true;
+            Class_Id.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "11", "12", "13", "14", "15" });
+            Class_Id.Location = new Point(377, 341);
+            Class_Id.Name = "Class_Id";
+            Class_Id.Size = new Size(121, 23);
+            Class_Id.TabIndex = 23;
+            // 
             // AddStudent
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Class_Id);
             Controls.Add(label11);
             Controls.Add(phone);
-            Controls.Add(classid);
             Controls.Add(label10);
             Controls.Add(email);
             Controls.Add(label9);
@@ -287,6 +290,32 @@
             Name = "AddStudent";
             Text = "AddStudent";
             Load += AddStudent_Load;
+            Controls.SetChildIndex(AddStudentButton, 0);
+            Controls.SetChildIndex(label1, 0);
+            Controls.SetChildIndex(student_id, 0);
+            Controls.SetChildIndex(label2, 0);
+            Controls.SetChildIndex(frist_name, 0);
+            Controls.SetChildIndex(label3, 0);
+            Controls.SetChildIndex(last_name, 0);
+            Controls.SetChildIndex(label4, 0);
+            Controls.SetChildIndex(parnt_id, 0);
+            Controls.SetChildIndex(label5, 0);
+            Controls.SetChildIndex(gander, 0);
+            Controls.SetChildIndex(label6, 0);
+            Controls.SetChildIndex(level, 0);
+            Controls.SetChildIndex(label7, 0);
+            Controls.SetChildIndex(dateofbirth, 0);
+            Controls.SetChildIndex(label8, 0);
+            Controls.SetChildIndex(address, 0);
+            Controls.SetChildIndex(label9, 0);
+            Controls.SetChildIndex(email, 0);
+            Controls.SetChildIndex(label10, 0);
+            Controls.SetChildIndex(phone, 0);
+            Controls.SetChildIndex(label11, 0);
+            Controls.SetChildIndex(LogoutButton, 0);
+            Controls.SetChildIndex(HomeButton, 0);
+            Controls.SetChildIndex(BackButton, 0);
+            Controls.SetChildIndex(Class_Id, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -312,9 +341,9 @@
         private TextBox address;
         private TextBox email;
         private Label label9;
-        private TextBox classid;
         private Label label10;
         private Label label11;
         private TextBox phone;
+        private ComboBox Class_Id;
     }
 }

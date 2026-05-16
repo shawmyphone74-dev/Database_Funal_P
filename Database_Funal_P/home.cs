@@ -8,24 +8,27 @@ namespace Database_Funal_P
     {
         public home()
         {
-       
+
             InitializeComponent();
 
-        AddButton.Click += AddButton_Click;
+            AddButton.Click += AddButton_Click;
             DeleteButton.Click += DeleteButton_Click;
-        
+
             UpdateButton.Click += UpdateButton_Click;
             DisplayButton.Click += DisplayButton_Click;
             SimpleQueries.Click += SimpleQueries_Click;
-            JoinQueries.Click += JoinQueries_Click; 
+            JoinQueries.Click += JoinQueries_Click;
             Aggregatequeries.Click += Aggregatequeries_Click;
             SubQueries.Click += SubQueries_Click;
             BackButton.Click += BackButton_Click;
+            
+            this.StartPosition = FormStartPosition.CenterScreen;
+            
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            AddForm form = new AddForm(); 
+            AddForm form = new AddForm();
             form.Show();
             this.Close();
         }
@@ -37,13 +40,13 @@ namespace Database_Funal_P
         }
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            Update form = new Update(); 
+            Update form = new Update();
             form.Show();
             this.Close();
         }
         private void DisplayButton_Click(object sender, EventArgs e)
         {
-            Display form = new Display(); 
+            Display form = new Display();
             form.Show();
             this.Close();
         }
@@ -55,7 +58,7 @@ namespace Database_Funal_P
         }
         private void JoinQueries_Click(object sender, EventArgs e)
         {
-            JoinQueries form = new JoinQueries ();
+            JoinQueries form = new JoinQueries();
             form.Show();
             this.Close();
         }
@@ -77,9 +80,12 @@ namespace Database_Funal_P
             form.Show();
             this.Close();
         }
+       
         private void home_Load(object sender, EventArgs e)
         {
 
         }
+
+      
     }
 }

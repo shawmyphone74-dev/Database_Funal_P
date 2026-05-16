@@ -34,7 +34,7 @@ namespace Database_Funal_P
                 (
                     {int.Parse(student_id.Text)},
                     {int.Parse(parnt_id.Text)},
-                    {int.Parse(classid.Text)},
+                    {int.Parse(Class_Id.Text)},
                     '{frist_name.Text}',
                     '{last_name.Text}',
                     '{gander.Text}',
@@ -44,7 +44,7 @@ namespace Database_Funal_P
                     '{address.Text}'
                 )";
 
-                DatabaseHelper.ExecuteQuery(studentQuery);
+                DatabaseHelper.Execute(studentQuery);
 
                 string phoneQuery = $@"
                 INSERT INTO Student_Phone
@@ -58,13 +58,13 @@ namespace Database_Funal_P
                     '{phone.Text}'
                 )";
 
-                DatabaseHelper.ExecuteQuery(phoneQuery);
+                DatabaseHelper.Execute(phoneQuery);
 
                 MessageBox.Show("Student Added Successfully  ");
 
                 student_id.Clear();
                 parnt_id.Clear();
-                classid.Clear();
+                Class_Id.SelectedIndex = -1;
                 frist_name.Clear();
                 last_name.Clear();
                 gander.SelectedIndex=-1;

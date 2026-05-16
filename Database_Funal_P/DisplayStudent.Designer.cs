@@ -28,7 +28,7 @@
             // 
             // BackButton
             // 
-            BackButton.Location = new Point(12, 406);
+            BackButton.Location = new Point(8, 406);
             // 
             // SearchType
             // 
@@ -59,11 +59,13 @@
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(40, 150);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(720, 250);
             dataGridView1.TabIndex = 3;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 

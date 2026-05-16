@@ -33,10 +33,6 @@
             label2 = new Label();
             SuspendLayout();
             // 
-            // BackButton
-            // 
-            BackButton.Location = new Point(12, 382);
-            // 
             // deleteButton
             // 
             deleteButton.Location = new Point(644, 360);
@@ -57,7 +53,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(232, 60);
+            label2.Location = new Point(232, 64);
             label2.Name = "label2";
             label2.Size = new Size(83, 21);
             label2.TabIndex = 24;

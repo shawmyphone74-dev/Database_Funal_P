@@ -54,7 +54,7 @@
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(629, 318);
+            deleteButton.Location = new Point(639, 360);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(106, 50);
             deleteButton.TabIndex = 26;
@@ -67,9 +67,9 @@
             label1.Font = new Font("Segoe UI", 12F);
             label1.Location = new Point(225, 136);
             label1.Name = "label1";
-            label1.Size = new Size(83, 21);
+            label1.Size = new Size(108, 21);
             label1.TabIndex = 29;
-            label1.Text = "Student_Id";
+            label1.Text = "Attendance_Id";
             // 
             // dateTimePicker1
             // 
@@ -91,6 +91,14 @@
             Controls.Add(deleteButton);
             Name = "DeleteAttendance";
             Text = "DeleteAttendance";
+            Controls.SetChildIndex(deleteButton, 0);
+            Controls.SetChildIndex(label2, 0);
+            Controls.SetChildIndex(Student_ID, 0);
+            Controls.SetChildIndex(label1, 0);
+            Controls.SetChildIndex(dateTimePicker1, 0);
+            Controls.SetChildIndex(LogoutButton, 0);
+            Controls.SetChildIndex(HomeButton, 0);
+            Controls.SetChildIndex(BackButton, 0);
             ResumeLayout(false);
             PerformLayout();
         }

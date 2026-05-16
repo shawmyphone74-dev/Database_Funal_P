@@ -38,6 +38,7 @@
             SubQueries = new Button();
             JoinQueries = new Button();
             BackButton = new Button();
+          
             SuspendLayout();
             // 
             // DisplayButton
@@ -131,11 +132,16 @@
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = true;
             // 
+            // TeAdmin
+            // 
+           
+            // 
             // home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+           
             Controls.Add(BackButton);
             Controls.Add(JoinQueries);
             Controls.Add(SubQueries);
@@ -166,5 +172,6 @@
         private Button SubQueries;
         private Button JoinQueries;
         private Button BackButton;
+       
     }
 }

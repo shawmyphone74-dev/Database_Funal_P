@@ -8,8 +8,9 @@ namespace Database_Funal_P
         public LoginForm()
         {
             InitializeComponent();
-            LogIn_Button.Click += LogIn_Button_Click;
-            
+            LogIn_Button.Click += Button_Click;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -17,7 +18,7 @@ namespace Database_Funal_P
 
         }
 
-        private void LogIn_Button_Click(object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
             string username = User_TextBox.Text;
             string password = Password_TextBox.Text;

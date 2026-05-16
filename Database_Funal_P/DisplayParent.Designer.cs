@@ -1,4 +1,4 @@
-﻿// DisplayParent.Designer.cs
+﻿
 
 namespace Database_Funal_P
 {

@@ -34,7 +34,7 @@ namespace Database_Funal_P
                 DELETE FROM Student
                 WHERE Student_ID = {studentId}";
 
-                DatabaseHelper.ExecuteQuery(query);
+                DatabaseHelper.Execute(query);
 
                 MessageBox.Show("Student Deleted Successfully ");
 

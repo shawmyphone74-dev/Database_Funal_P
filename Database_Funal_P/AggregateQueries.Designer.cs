@@ -35,7 +35,7 @@ namespace Database_Funal_P
             // 
             QueryType.DropDownStyle = ComboBoxStyle.DropDownList;
             QueryType.FormattingEnabled = true;
-            QueryType.Items.AddRange(new object[] { "Students Count By Level", "Maximum Teacher Salary", "Minimum Credit Hours", "Classes Having More Than 2 Students", "Average Teacher Salary", "Total Courses", "Total Teachers", "Total Students", "Highest Credit Hours,", "Lowest Teacher Salary", "Students Count By Class", "Courses Count By Teacher" });
+            QueryType.Items.AddRange(new object[] { "Students Count By Level", "Maximum Teacher Salary", "Maximum Credit Hours Course", "Minimum Credit Hours Course", "Classes Having More Than 2 Students", "Average Teacher Salary", "Total Courses", "Total Teachers", "Total Students", "Lowest Teacher Salary", "Students Count By Class", "Courses Count By Teacher" });
             QueryType.Location = new Point(120, 70);
             QueryType.Name = "QueryType";
             QueryType.Size = new Size(250, 23);

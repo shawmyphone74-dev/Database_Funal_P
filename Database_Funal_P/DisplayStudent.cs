@@ -83,5 +83,10 @@ namespace Database_Funal_P
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

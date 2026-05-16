@@ -46,9 +46,9 @@
             label2.Font = new Font("Segoe UI", 12F);
             label2.Location = new Point(249, 74);
             label2.Name = "label2";
-            label2.Size = new Size(74, 21);
+            label2.Size = new Size(82, 21);
             label2.TabIndex = 30;
-            label2.Text = "Parent_Id";
+            label2.Text = "Teacher_Id";
             // 
             // deleteButton
             // 
@@ -69,6 +69,12 @@
             Controls.Add(deleteButton);
             Name = "DeleteTeacher";
             Text = "DeleteTeacher";
+            Controls.SetChildIndex(deleteButton, 0);
+            Controls.SetChildIndex(label2, 0);
+            Controls.SetChildIndex(teacher_Id, 0);
+            Controls.SetChildIndex(LogoutButton, 0);
+            Controls.SetChildIndex(HomeButton, 0);
+            Controls.SetChildIndex(BackButton, 0);
             ResumeLayout(false);
             PerformLayout();
         }

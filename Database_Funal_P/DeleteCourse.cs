@@ -27,9 +27,9 @@ namespace Database_Funal_P
                 WHERE Course_ID = 
                 {int.Parse(course_Id.Text)}";
 
-                DatabaseHelper.ExecuteQuery(query);
+                DatabaseHelper.Execute(query);
 
-                MessageBox.Show("Deleted Successfully ✅");
+                MessageBox.Show("Deleted Successfully  ");
 
                 course_Id.Clear();
             }

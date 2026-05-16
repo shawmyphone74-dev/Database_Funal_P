@@ -49,7 +49,7 @@ namespace Database_Funal_P
                 // MIN CREDIT HOURS
                 
 
-                else if (QueryType.Text == "Minimum Credit Hours")
+                else if (QueryType.Text == "Minimum Credit Hours Course")
                 {
                     query = @"
                     SELECT 
@@ -57,9 +57,16 @@ namespace Database_Funal_P
                     FROM Course";
                 }
 
-             
+                else if (QueryType.Text == "Maximum Credit Hours Course")
+                {
+                    query = @"
+                    SELECT 
+                    MAX(Credit_Hours) AS MinHours
+                    FROM Course";
+                }
+
                 // CLASSES HAVING MORE THAN 2 STUDENTS
-               
+
 
                 else if (QueryType.Text ==
                          "Classes Having More Than 2 Students")
@@ -123,20 +130,11 @@ namespace Database_Funal_P
                     FROM Student";
                 }
 
-                // HIGHEST CREDIT HOURS
-            
-                else if (QueryType.Text ==
-                         "Highest Credit Hours")
-                {
-                    query = @"
-                    SELECT 
-                    MAX(Credit_Hours) AS HighestHours
-                    FROM Course";
-                }
-
                 
+                
+
                 // LOWEST TEACHER SALARY
-           
+
 
                 else if (QueryType.Text ==
                          "Lowest Teacher Salary")
@@ -171,14 +169,15 @@ namespace Database_Funal_P
                     query = @"
                     SELECT 
                     Teacher_ID,
-                    COUNT(*) AS TotalCourses
+                    COUNT(Course_id) AS TotalCourses
                     FROM Teaches
-                    GROUP BY Teacher_ID";
+                    GROUP BY  Teacher_ID";
                 }
 
+                
                 else
                 {
-                    MessageBox.Show("Choose Query Type");
+                    MessageBox.Show(" Please Choose Query Type");
                     return;
                 }
 
