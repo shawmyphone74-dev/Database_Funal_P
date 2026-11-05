@@ -1,1 +1,2 @@
-# Database_Funal_P
+# Database_Final_Project 
+school management system 
